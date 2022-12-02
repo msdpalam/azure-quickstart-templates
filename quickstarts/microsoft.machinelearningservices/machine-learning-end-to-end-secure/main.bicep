@@ -160,7 +160,7 @@ module dsvm 'modules/dsvmjumpbox.bicep' = if (deployJumphost) {
   name: 'vm-${name}-${uniqueSuffix}-deployment'
   params: {
     location: location
-    virtualMachineName: 'vm-${name}-${uniqueSuffix}'
+    virtualMachineName: 'vm${name}${uniqueSuffix}'
     subnetId: '${vnet.outputs.id}/subnets/snet-training'
     adminUsername: dsvmJumpboxUsername
     adminPassword: dsvmJumpboxPassword
